@@ -15,7 +15,7 @@ By using this four different tools, the application can receive the latest relea
 For some explanation of the different technologies used, continue reading, or you can jump to [Using Updates](#using-updates).
 
 ###1.  Webhooks
-Webhooks are used in order to point the repository to `https://yourapp.herokuapp.com/webhook.php` (or `https://domain.com/.../webhook.php`), or rename [webhook.php](webhook.php), read the JSON payload, and store the release.
+Webhooks are used in order to point the repository to `https://yourapp.herokuapp.com/scripts/webhook.php` (or `https://domain.com/.../scripts/webhook.php`), or rename [webhook.php](scripts/webhook.php), read the JSON payload, and store the release.
 
 ###2.  Heroku
 Used to run the PHP, mainly to manage the webhook endpoint, and also to read the Postgres database for updates (to generate required JSON).
@@ -97,7 +97,7 @@ If you don't plan on using Heroku, don't fear, the setup is still easy.  Upload 
 ### Adding your Webhook
 To add your webhook, go to your repositories "Settings", and then to "Webhooks & Services".
 
-Add a webhook, set the "Payload URL" to your [webhook.php](webhook.php) endpoint, the "Content type" to `application/json` ~~and enter a secret (if you'd like)~~ (secrets are not yet supported, though they should be).
+Add a webhook, set the "Payload URL" to your [webhook.php](scripts/webhook.php) endpoint, the "Content type" to `application/json` ~~and enter a secret (if you'd like)~~ (secrets are not yet supported, though they should be).
 
 When you see
 

@@ -1,5 +1,5 @@
 <?php
-	require('connect.php');
+	require('scripts/connect.php');
 	date_default_timezone_set('America/New_York');
 
 	header('Content-type: application/json;');
@@ -13,7 +13,7 @@
 
 		try {
 			$query = 'SELECT * FROM releases WHERE prerelease=FALSE ORDER BY version DESC;';
-			
+
 			$result = pg_query($db, $query);
 		}
 		catch (Exception $exception) {
