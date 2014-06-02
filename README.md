@@ -70,7 +70,6 @@ In the `.gitignore`, the file that is not included is `secret.php`, named for th
 <?php
     $dbCredentials = 'dbname={DATABASE NAME} port=5432 user={USERNAME} password={PASSWORD} sslmode=require';
 ?>
-
 ```
 
 You can generate these details, if using Heroku + Heroku Postgres by typing `heroku pg:credentials {DB NAME}`.  Then, just copy this string into the place of the `$dbCredentials` variable above, and you're all set!  Just remember not to push that file to GitHub if you're using a public repo (you still have to push it to Heroku so you can connect)!
